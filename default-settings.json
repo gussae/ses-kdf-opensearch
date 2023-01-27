@@ -1,0 +1,40 @@
+{
+    "deliveryStreamS3BackupMode": "FailedDocumentsOnly",
+    "ebsOptions": {
+        "enabled": true,
+        "volumeSize": 10
+    },
+    "enableCloudWatchLogging": true,
+    "enableFineGrainedAccess": true,
+    "enableVpc": false,
+    "indexRotationPeriod": "NoRotation",
+    "loggingOptions": {
+        "slowSearchLogEnabled": true,
+        "appLogEnabled": true,
+        "slowIndexLogEnabled": true
+    },
+    "opensearchVersion": "1",
+    "opensearchCapacity": {
+        "dataNodeInstanceType": "t3.small.search",
+        "dataNodes": 1,
+        "masterNodes": 0,
+        "warmNodes": 0
+    },
+    "sesMatchingEventTypes": {
+        "send": true,
+        "reject": true,
+        "bounce": true,
+        "complaint": true,
+        "delivery": true,
+        "open": true,
+        "click": true,
+        "renderingFailure": true,
+        "deliveryDelay": true,
+        "subscription": false
+    },
+    "subnet": "PUBLIC",
+    "vpcName": "default",
+    "zoneAwareness": {
+        "enabled": false
+    }
+}
