@@ -279,7 +279,7 @@ export class SesKdfOpensearchStack extends Stack {
         },
       }
     );
-    eventDestination.node.addDependency(deliveryStream, configSet);
+    eventDestination.node.addDependency(deliveryStream, configSet, sesFirehoseAccess);
 
     //outputs
     new CfnOutput(this, `${kdfOpensearchAccessRoleName}Arn`, {
